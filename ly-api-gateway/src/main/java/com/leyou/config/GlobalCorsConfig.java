@@ -29,6 +29,8 @@ public class GlobalCorsConfig {
         config.addAllowedMethod("PATCH");
         // 4）允许的头信息
         config.addAllowedHeader("*");
+        // 5）有效时长
+        config.setMaxAge(3600L);
 
         //2.添加映射路径，我们拦截一切请求
         UrlBasedCorsConfigurationSource configSource = new UrlBasedCorsConfigurationSource();
